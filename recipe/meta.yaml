@@ -1,13 +1,13 @@
 {% set name = "python-constraint2" %}
-{% set version = "2.0.0b5" %}
+{% set version = "2.0.0b8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python_constraint2-{{ version }}.tar.gz
-  sha256: 497883a0457143e3c7c591ed531c95f4aa0c5070e248bae8fc60c5b6244c21e3
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/python_constraint2-{{ version }}.tar.gz
+  sha256: 5bb7948c54a75c8b73b3484c3c58fbd347b65d9e12072d54b832ac12cdce35bb
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cython >=3.0.2
     - pip
