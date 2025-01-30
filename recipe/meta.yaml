@@ -1,5 +1,5 @@
 {% set name = "python-constraint2" %}
-{% set version = "2.0.0b8" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/python_constraint2-{{ version }}.tar.gz
-  sha256: 5bb7948c54a75c8b73b3484c3c58fbd347b65d9e12072d54b832ac12cdce35bb
+  sha256: 4f05dd519e88ce1b6212963f7db032fb35194c466579e293e22ce3f091d65665
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
