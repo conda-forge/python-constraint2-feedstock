@@ -18,11 +18,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
-    - cython >=3.0.2
+    - cython >=3.0.12
     - pip
-    - poetry-core >=1.7.0
+    - poetry-core >=2.0.1
     - python
-    - setuptools >=67.7.2
+    - setuptools >=75.8.0
   run:
     - python
 
@@ -36,6 +36,7 @@ test:
     - pep440
     - pip
     - pytest
+    - pytest-benchmark
     - pytest-cov
     - tomli
   source_files:
