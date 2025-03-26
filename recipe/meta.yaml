@@ -1,5 +1,5 @@
 {% set name = "python-constraint2" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/python_constraint2-{{ version }}.tar.gz
-  sha256: fbb6ab033a7a4250bce11ca12fdf8958c6c42853e933cf585dbd265e0967dd93
+  sha256: b2186478bba1d6e59ff954ff77cbf1e8444dcfafa4269fc04903d11fd8881cbe
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -18,11 +18,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
-    - cython >=3.0.2
+    - cython >=3.0.12
     - pip
-    - poetry-core >=1.7.0
+    - poetry-core >=2.0.1
     - python
-    - setuptools >=67.7.2
+    - setuptools >=75.8.0
   run:
     - python
 
@@ -36,6 +36,7 @@ test:
     - pep440
     - pip
     - pytest
+    - pytest-benchmark
     - pytest-cov
     - tomli
   source_files:
