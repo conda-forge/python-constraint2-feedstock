@@ -3,13 +3,13 @@ About python-constraint2-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-constraint2-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/python-constraint/python-constraint
+Home: http://python-constraint.github.io/python-constraint/
 
 Package license: BSD-2-Clause
 
-Summary: A module for efficiently solving CSPs (Constraint Solving Problems) over finite domains.
+Summary: python-constraint is a module for efficiently solving CSPs (Constraint Solving Problems) over finite domains.
 
-Documentation: http://python-constraint.github.io/python-constraint
+Documentation: http://python-constraint.github.io/python-constraint/
 
 Current build status
 ====================
