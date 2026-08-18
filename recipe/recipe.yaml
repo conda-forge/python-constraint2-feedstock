@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   python_min: "3.11"
-  version: "2.6.0"
+  version: "2.7.3"
 
 package:
   name: python-constraint2
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/python-constraint2/python_constraint2-${{ version }}.tar.gz
-  sha256: e3725aa8d0febacad36bad1b2b881e51a857f4e3b676643b687ea34c1aff8721
+  sha256: 9e0dbf061a7be7f2837239cbc51e3d0c5f9521724fb07a987c64f0bf3bce6438
 
 build:
   number: 0
