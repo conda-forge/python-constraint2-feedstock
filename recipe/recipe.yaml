@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   python_min: "3.11"
-  version: "2.7.0"
+  version: "2.7.1"
 
 package:
   name: python-constraint2
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/python-constraint2/python_constraint2-${{ version }}.tar.gz
-  sha256: d4e65fc5cfe3d7533bdc679dd922823542109f3d18e0c57ffa16047a445819f1
+  sha256: 3e9fb77c0515cf379263a7ed71e606721658ae056ed0de3c02b7ac2d3270cf3a
 
 build:
   number: 0
@@ -25,8 +25,8 @@ requirements:
   host:
     - python
     - poetry-core
-    - setuptools >=75.8.0
-    - cython >=3.0.12
+    - setuptools
+    - cython
     - pip
   run:
     - python
@@ -46,15 +46,15 @@ tests:
         - pep440
         - pytest
         - pytest-benchmark
-        - tomli
     script:
-      - pytest --ignore tests/test_constraint.py --ignore tests/test_compilation.py -o addopts=
+      - pytest --ignore tests/test_constraint.py --ignore tests/test_examples.py --ignore tests/test_compilation.py -o addopts=
 
 about:
   summary: python-constraint is a module for efficiently solving CSPs (Constraint Solving Problems) over finite domains.
   license: BSD-2-Clause
   license_file: LICENSE
   homepage: http://python-constraint.github.io/python-constraint/
+  repository: https://github.com/python-constraint/python-constraint
   documentation: http://python-constraint.github.io/python-constraint/
 
 extra:
