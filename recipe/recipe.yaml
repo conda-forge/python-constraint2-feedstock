@@ -13,7 +13,7 @@ source:
   sha256: 9e0dbf061a7be7f2837239cbc51e3d0c5f9521724fb07a987c64f0bf3bce6438
 
 build:
-  number: 0
+  number: 1
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip:
     - match(python, "<" ~ python_min)
