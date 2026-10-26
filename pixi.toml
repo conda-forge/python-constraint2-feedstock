@@ -9,7 +9,7 @@ version = "2026.10.24"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/python-constraint2-feedstock"
 authors = ["@conda-forge/python-constraint2"]
 channels = ["conda-forge"]
-platforms = ["linux-64", "osx-64", "win-64"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
 requires-pixi = ">=0.59.0"
 
 [tasks.build-locally]
@@ -127,6 +127,51 @@ description = "Debug python-constraint2-feedstock with variant osx_64_python3.15
 [feature.build.tasks."inspect-osx_64_python3.15.____cp315"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.15.____cp315.yaml"
 description = "List contents of python-constraint2-feedstock packages built for variant osx_64_python3.15.____cp315"
+[feature.build.tasks."build-osx_arm64_python3.11.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml --target-platform osx-arm64"
+description = "Build python-constraint2-feedstock with variant osx_arm64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.11.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml --target-platform osx-arm64"
+description = "Debug python-constraint2-feedstock with variant osx_arm64_python3.11.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.11.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml"
+description = "List contents of python-constraint2-feedstock packages built for variant osx_arm64_python3.11.____cpython"
+[feature.build.tasks."build-osx_arm64_python3.12.____cpython"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml --target-platform osx-arm64"
+description = "Build python-constraint2-feedstock with variant osx_arm64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.12.____cpython"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml --target-platform osx-arm64"
+description = "Debug python-constraint2-feedstock with variant osx_arm64_python3.12.____cpython directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.12.____cpython"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.12.____cpython.yaml"
+description = "List contents of python-constraint2-feedstock packages built for variant osx_arm64_python3.12.____cpython"
+[feature.build.tasks."build-osx_arm64_python3.13.____cp313"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml --target-platform osx-arm64"
+description = "Build python-constraint2-feedstock with variant osx_arm64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.13.____cp313"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml --target-platform osx-arm64"
+description = "Debug python-constraint2-feedstock with variant osx_arm64_python3.13.____cp313 directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.13.____cp313"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.13.____cp313.yaml"
+description = "List contents of python-constraint2-feedstock packages built for variant osx_arm64_python3.13.____cp313"
+[feature.build.tasks."build-osx_arm64_python3.14.____cp314"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml --target-platform osx-arm64"
+description = "Build python-constraint2-feedstock with variant osx_arm64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.14.____cp314"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml --target-platform osx-arm64"
+description = "Debug python-constraint2-feedstock with variant osx_arm64_python3.14.____cp314 directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.14.____cp314"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.14.____cp314.yaml"
+description = "List contents of python-constraint2-feedstock packages built for variant osx_arm64_python3.14.____cp314"
+[feature.build.tasks."build-osx_arm64_python3.15.____cp315"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.15.____cp315.yaml --target-platform osx-arm64"
+description = "Build python-constraint2-feedstock with variant osx_arm64_python3.15.____cp315 directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.15.____cp315"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.15.____cp315.yaml --target-platform osx-arm64"
+description = "Debug python-constraint2-feedstock with variant osx_arm64_python3.15.____cp315 directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.15.____cp315"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.15.____cp315.yaml"
+description = "List contents of python-constraint2-feedstock packages built for variant osx_arm64_python3.15.____cp315"
 [feature.build.tasks."build-win_64_python3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.11.____cpython.yaml --target-platform win-64"
 description = "Build python-constraint2-feedstock with variant win_64_python3.11.____cpython directly (without setup scripts)"
