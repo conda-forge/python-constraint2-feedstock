@@ -22,14 +22,14 @@ requirements:
     - if: build_platform != host_platform
       then: cross-python_${{ host_platform }}
     - if: build_platform != host_platform
-      then: cython
+      then: cython >=3.3.0
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
   host:
     - python
-    - poetry-core
-    - setuptools
-    - cython
+    - poetry-core >=2.5.0
+    - setuptools >=84.0.0
+    - cython >=3.3.0
     - pip
   run:
     - python
